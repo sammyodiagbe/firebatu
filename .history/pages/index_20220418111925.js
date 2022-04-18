@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState, useContext } from "react";
 import Logout from "../components/logout";
 import { authContext } from "../context/authcontext";
-import { addDoc, collection, setDoc, doc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 
 // const activeUser = auth.currentUser;
 // console.log(activeUser);
@@ -27,13 +27,14 @@ export default function Home() {
       const updateprofile = await updateProfile(auth.currentUser, {
         displayName: username,
       });
-      const add = await setDoc(doc(firestore, "users", auth.currentUser.uid), {
-        username,
-        xp: 1000,
-        total_batus: 0,
-        won: 0,
-        lost: 0,
-      });
+      const add = await addDoc(
+        collection(firestore, `users/${auth.currentUser.uid}`),
+        {
+          username,
+          xp: 1000,
+          total_batus: 0,
+        }
+      );
       console.log(add);
     } catch (error) {
       console.log(`Something went wrong`);

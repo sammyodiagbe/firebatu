@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState, useContext } from "react";
 import Logout from "../components/logout";
 import { authContext } from "../context/authcontext";
-import { addDoc, collection, setDoc, doc } from "firebase/firestore";
+import { addDoc, collection, setDoc } from "firebase/firestore";
 
 // const activeUser = auth.currentUser;
 // console.log(activeUser);
