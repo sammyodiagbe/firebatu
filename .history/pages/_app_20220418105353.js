@@ -1,17 +1,15 @@
 import "../styles/globals.css";
 import { authContext } from "../context/authcontext";
-import { useEffect, useState } from "react";
+import { useEffect } from "react/cjs/react.production.min";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../config/firebase.config";
-import _ from "lodash";
+import auth from "../config/firebase.config";
 
 function MyApp({ Component, pageProps }) {
   const [user, setUser] = useState(null);
   const [authenticated, setAuthenticated] = useState(false);
   useEffect(() => {
-    return onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, (user) => {
       console.log(user);
-      console.log(_.isEmpty(user));
       setUser(user);
     });
   }, [user]);

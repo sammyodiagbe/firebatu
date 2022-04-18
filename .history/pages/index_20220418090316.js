@@ -2,9 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { auth } from "../config/firebase.config";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { useState, useContext } from "react";
-import Logout from "../components/logout";
-import { authContext } from "../context/authcontext";
+import { useState } from "react";
 
 // const activeUser = auth.currentUser;
 // console.log(activeUser);
@@ -13,7 +11,6 @@ export default function Home() {
   const [username, setUsername] = useState("");
   const [password, setUserPassword] = useState("");
   const [email, setEmail] = useState("");
-  const { user } = useContext(authContext);
 
   const createUserWithUsername = async (e) => {
     e.preventDefault();
@@ -23,7 +20,7 @@ export default function Home() {
         email,
         password
       );
-      const updateprofile = await updateProfile(auth.currentUser, {
+      const updateprofile = await updateProfile(createuser, {
         displayName: username,
       });
       console.log(updateprofile);
@@ -43,7 +40,6 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1>Firebatu</h1>
-        {user && <Logout />}
         <div className={styles.container}>
           <form onSubmit={createUserWithUsername}>
             <input
