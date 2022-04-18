@@ -15,14 +15,11 @@ export default function Home() {
   const createUserWithUsername = async (e) => {
     e.preventDefault();
     try {
-      const createuser = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+      const createuser = createUserWithEmailAndPassword(auth, email, password);
+      console.log(createuser);
     } catch (error) {
-      console.log(`Something went wrong`);
-      console.log(error.code);
+      console.error(`Something went wrong`);
+      console.error(error.code);
     }
   };
   return (
@@ -34,7 +31,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Firebatu</h1>
+        <h1>Let's code this out</h1>
         <div className={styles.container}>
           <form onSubmit={createUserWithUsername}>
             <input

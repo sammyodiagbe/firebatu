@@ -34,7 +34,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Firebatu</h1>
+        <h1>Let's code this out</h1>
         <div className={styles.container}>
           <form onSubmit={createUserWithUsername}>
             <input

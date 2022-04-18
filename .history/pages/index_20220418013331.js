@@ -10,20 +10,9 @@ import { useState } from "react";
 export default function Home() {
   const [username, setUsername] = useState("");
   const [password, setUserPassword] = useState("");
-  const [email, setEmail] = useState("");
 
-  const createUserWithUsername = async (e) => {
+  const createUserWithUsername = (e) => {
     e.preventDefault();
-    try {
-      const createuser = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-    } catch (error) {
-      console.log(`Something went wrong`);
-      console.log(error.code);
-    }
   };
   return (
     <div className={styles.container}>
@@ -34,21 +23,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Firebatu</h1>
+        <h1>Let's code this out</h1>
         <div className={styles.container}>
-          <form onSubmit={createUserWithUsername}>
-            <input
-              type={"email"}
-              placeholder={"Enter email"}
-              value={email}
-              name="email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <hr />
+          <form action={createUserWithUsername}>
             <input
               type="text"
               placeholder="Choose your identity!!"
-              name="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -56,9 +36,8 @@ export default function Home() {
             <input
               type="password"
               placeholder="Choose password"
-              name="password"
               value={password}
-              onChange={(e) => setUserPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <hr />
             <button type="submit">Create your account</button>
