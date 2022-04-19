@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import { auth, firestore } from "../config/firebase.config";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState, useContext } from "react";
+import Logout from "../components/logout";
 import { authContext } from "../context/authcontext";
 import { addDoc, collection, setDoc, doc } from "firebase/firestore";
 import { useRouter } from "next/router";
