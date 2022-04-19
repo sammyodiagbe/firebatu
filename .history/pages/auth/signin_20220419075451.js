@@ -14,14 +14,8 @@ const Signin = () => {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(_.isEmpty(user));
-    console.log(user);
-    // if (_.isEmpty(user)) router.push("/home");
-    setTimeout(() => {
-      console.log(_.isEmpty(user));
-      console.log(user);
-    }, 10000);
-  }, []);
+    if (!_.isEmpty(user)) router.push("/home");
+  });
 
   const login = async (e) => {
     e.preventDefault();

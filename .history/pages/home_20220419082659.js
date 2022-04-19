@@ -37,7 +37,7 @@ const Home = () => {
               <h2>Flipper</h2>
               <Link
                 style={linkLikebuttonStyle}
-                href={"/game/batuground?game=flipper"}
+                href={"/game/batuground?room=flipper"}
               >
                 Play flipper
               </Link>
@@ -46,14 +46,14 @@ const Home = () => {
               <h2>Spellbatu</h2>
               <Link
                 style={linkLikebuttonStyle}
-                href="/game/batuground?game=spellbatu"
+                href="/game/batuground?room=spellbatu"
               >
                 Play Spellbatu
               </Link>
             </div>
             <div>
               <h2>Builder</h2>
-              <Link href={"/game/batuground?game=builder"}>Play Builder</Link>
+              <Link href={"/game/batuground?room=builder"}>Play Builder</Link>
             </div>
           </div>
         </main>

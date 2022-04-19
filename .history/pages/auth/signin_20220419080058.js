@@ -15,12 +15,7 @@ const Signin = () => {
 
   useEffect(() => {
     console.log(_.isEmpty(user));
-    console.log(user);
     // if (_.isEmpty(user)) router.push("/home");
-    setTimeout(() => {
-      console.log(_.isEmpty(user));
-      console.log(user);
-    }, 10000);
   }, []);
 
   const login = async (e) => {

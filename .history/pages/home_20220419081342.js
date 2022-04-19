@@ -35,25 +35,15 @@ const Home = () => {
           <div className="games">
             <div>
               <h2>Flipper</h2>
-              <Link
-                style={linkLikebuttonStyle}
-                href={"/game/batuground?game=flipper"}
-              >
-                Play flipper
-              </Link>
+              <Link href={"/game/batuground?room=flipper"}>Play flipper</Link>
             </div>
             <div>
               <h2>Spellbatu</h2>
-              <Link
-                style={linkLikebuttonStyle}
-                href="/game/batuground?game=spellbatu"
-              >
-                Play Spellbatu
-              </Link>
+              <Link href="/game/batuground?room=spellbatu">Play Spellbatu</Link>
             </div>
             <div>
               <h2>Builder</h2>
-              <Link href={"/game/batuground?game=builder"}>Play Builder</Link>
+              <Link href={"/game/batuground?room=builder"}>Play Builder</Link>
             </div>
           </div>
         </main>
