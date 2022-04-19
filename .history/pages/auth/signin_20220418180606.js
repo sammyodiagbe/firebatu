@@ -6,13 +6,11 @@ import Logout from "../../components/logout";
 import { useContext } from "react";
 import { authContext } from "../../context/authcontext";
 import _ from "lodash";
-import { useRouter } from "next/router";
 
 const Signin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { user } = useContext(authContext);
-  const router = useRouter();
 
   const login = async (e) => {
     e.preventDefault();
@@ -22,7 +20,6 @@ const Signin = () => {
         username,
         password
       );
-      router.push("/home");
     } catch (error) {
       console.error(error.code);
     }

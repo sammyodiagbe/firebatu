@@ -6,13 +6,13 @@ import Logout from "../../components/logout";
 import { useContext } from "react";
 import { authContext } from "../../context/authcontext";
 import _ from "lodash";
-import { useRouter } from "next/router";
+import Router from "next/router";
 
 const Signin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { user } = useContext(authContext);
-  const router = useRouter();
+  const router = Router();
 
   const login = async (e) => {
     e.preventDefault();

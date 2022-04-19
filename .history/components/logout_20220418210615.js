@@ -1,9 +1,9 @@
 import { auth } from "../config/firebase.config";
 import { signOut } from "firebase/auth";
-import { useRouter } from "next/router";
+import Router from "next/router";
 
 const Logout = () => {
-  const router = useRouter();
+  const router = Router();
   const logout = async () => {
     try {
       const signout = await signOut(auth);

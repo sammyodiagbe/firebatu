@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
   const [authenticated, setAuthenticated] = useState(false);
   useEffect(() => {
     return onAuthStateChanged(auth, (user) => {
-      setUser(user);
+      if (!_.isEmpty(user)) setUser(user);
     });
   }, [user]);
   return (
