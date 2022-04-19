@@ -15,13 +15,11 @@ const Flipper = () => {
       10
     )
   );
-  //   position of the selection made by the current player
   const [selectionsPos, setSelectionPos] = useState([null, null]);
 
-  //   used to validate postion selection by player
   const validatePlay = (coordinate) => {
-    const [x1, y1] = coordinate[0]; // grab first tile pos
-    const [x2, y2] = coordinate[1]; // grab second tile pos
+    const [x1, y1] = coordinate[0];
+    const [x2, y2] = coordinate[1];
     //   for safety some people might try to play smart lol
     if (board[x1][y1] == null || board[x2][y2] == null) return;
     if (board[x1][y1] === board[x2][y2]) {
