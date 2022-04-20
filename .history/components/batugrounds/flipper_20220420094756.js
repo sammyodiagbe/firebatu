@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import _ from "lodash";
 import { listToMatrix } from "../../utils";
+import { useEffect } from "react/cjs/react.production.min";
 
 const Flipper = () => {
   const [board, setBoard] = useState(
@@ -52,7 +53,8 @@ const Flipper = () => {
   const makeSelection = (e) => {
     e.preventDefault();
     const { target } = e;
-    const { entryIndex } = target.dataset;
+    const { entryValue, entryIndex } = target.dataset;
+    entryValue = parseInt(entryValue);
     if (selectionsPos[0] == null) {
       let newPos = [...selectionsPos];
       newPos[0] = convertStringPosToint(entryIndex);
@@ -72,6 +74,7 @@ const Flipper = () => {
             <div className="col" key={ind}>
               <button
                 className="action-trigger"
+                data-entry-value={space}
                 data-entry-index={`${index},${ind}`}
                 onClick={makeSelection}
                 disabled={space == 0}

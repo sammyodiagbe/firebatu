@@ -52,7 +52,8 @@ const Flipper = () => {
   const makeSelection = (e) => {
     e.preventDefault();
     const { target } = e;
-    const { entryIndex } = target.dataset;
+    const { entryValue, entryIndex } = target.dataset;
+    entryValue = parseInt(entryValue);
     if (selectionsPos[0] == null) {
       let newPos = [...selectionsPos];
       newPos[0] = convertStringPosToint(entryIndex);
@@ -68,10 +69,12 @@ const Flipper = () => {
     return (
       <div className="row" key={index} style={{ display: "flex" }}>
         {entry.map((space, ind) => {
+          console.log(space);
           return (
             <div className="col" key={ind}>
               <button
                 className="action-trigger"
+                data-entry-value={`${space}`}
                 data-entry-index={`${index},${ind}`}
                 onClick={makeSelection}
                 disabled={space == 0}

@@ -8,26 +8,19 @@ import _ from "lodash";
 function MyApp({ Component, pageProps }) {
   const [user, setUser] = useState(null);
   const [authenticated, setAuthenticated] = useState(false);
-  // since we cannot get the user immediately our pages load then we can show the users a loading screen
-  // while we try to get the user
-  const [loading, setLoadingState] = useState(true);
   useEffect(() => {
     return onAuthStateChanged(auth, (user) => {
-      console.log(user);
       if (!user) {
         // here we know user is not logged in
         setAuthenticated(false);
-        setUser(null);
-        setLoadingState(false);
       } else {
         setUser(user);
         setAuthenticated(true);
-        setLoadingState(false);
       }
     });
   }, [user]);
   return (
-    <authContext.Provider value={{ user, authenticated, loading }}>
+    <authContext.Provider value={{ user, authenticated }}>
       <Component {...pageProps} />
     </authContext.Provider>
   );

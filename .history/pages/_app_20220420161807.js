@@ -13,11 +13,9 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoadingState] = useState(true);
   useEffect(() => {
     return onAuthStateChanged(auth, (user) => {
-      console.log(user);
       if (!user) {
         // here we know user is not logged in
         setAuthenticated(false);
-        setUser(null);
         setLoadingState(false);
       } else {
         setUser(user);
@@ -27,7 +25,7 @@ function MyApp({ Component, pageProps }) {
     });
   }, [user]);
   return (
-    <authContext.Provider value={{ user, authenticated, loading }}>
+    <authContext.Provider value={{ user, authenticated }}>
       <Component {...pageProps} />
     </authContext.Provider>
   );

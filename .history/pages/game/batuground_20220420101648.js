@@ -14,13 +14,12 @@ const BatuGround = () => {
   const { room } = router.query;
   useEffect(() => {
     //  join the room in the realdatabase
-    console.log("checking user - ", user);
-    const reference = ref(database, `flipper/user_id`);
+    const reference = ref(database, `${room}`, `${user.uid}`);
     const joinRoom = set(reference, {
       ...user,
     });
     joinRoom
-      .then((value) => console.log("it was a hit.", value))
+      .then((value) => console.log("it was a hit."))
       .catch((error) => console.log("error ", error));
   }, []);
 

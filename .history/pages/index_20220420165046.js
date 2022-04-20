@@ -8,7 +8,6 @@ import { addDoc, collection, setDoc, doc } from "firebase/firestore";
 import { useRouter } from "next/router";
 import _ from "lodash";
 import Loader from "../components/loader";
-import Signin from "../components/auth/signin";
 
 // const activeUser = auth.currentUser;
 // console.log(activeUser);
@@ -45,6 +44,6 @@ export default function Home() {
     return <Loader />;
   } else {
     console.log(user);
-    return authenticated ? <Home /> : <Signin />;
+    return <div>Loading stopped</div>;
   }
 }

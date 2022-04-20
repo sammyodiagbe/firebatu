@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import _ from "lodash";
 import { listToMatrix } from "../../utils";
 
@@ -15,10 +15,6 @@ const Flipper = () => {
       10
     )
   );
-
-  useEffect(() => {
-    // join the room
-  }, []);
   //   position of the selection made by the current player
   const [selectionsPos, setSelectionPos] = useState([null, null]);
 
@@ -52,13 +48,14 @@ const Flipper = () => {
   const makeSelection = (e) => {
     e.preventDefault();
     const { target } = e;
-    const { entryIndex } = target.dataset;
-    if (selectionsPos[0] == null) {
-      let newPos = [...selectionsPos];
+    const { entryValue, entryIndex } = target.dataset;
+    entryValue = parseInt(entryValue);
+    if (selectionPos[0] == null) {
+      newPos = [...selectionsPos];
       newPos[0] = convertStringPosToint(entryIndex);
       setSelectionPos(newPos);
     } else {
-      let newPos = [...selectionsPos];
+      newPos = [...selectionsPos];
       newPos[1] = convertStringPosToint(entryIndex);
       validatePlay(selectionsPos);
     }
@@ -72,6 +69,7 @@ const Flipper = () => {
             <div className="col" key={ind}>
               <button
                 className="action-trigger"
+                data-entry-value={space}
                 data-entry-index={`${index},${ind}`}
                 onClick={makeSelection}
                 disabled={space == 0}

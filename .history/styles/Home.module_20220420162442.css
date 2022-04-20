@@ -118,7 +118,7 @@
 div.loadingState {
   height: 100vh;
   position: fixed;
-  width: 100vw;
+  width: 100vh;
   background: slateblue;
   display: flex;
   align-items: center;

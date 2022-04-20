@@ -68,6 +68,7 @@ const Flipper = () => {
     return (
       <div className="row" key={index} style={{ display: "flex" }}>
         {entry.map((space, ind) => {
+          console.log(space);
           return (
             <div className="col" key={ind}>
               <button

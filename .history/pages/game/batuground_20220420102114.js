@@ -15,7 +15,7 @@ const BatuGround = () => {
   useEffect(() => {
     //  join the room in the realdatabase
     console.log("checking user - ", user);
-    const reference = ref(database, `flipper/user_id`);
+    const reference = ref(database, `${room}`);
     const joinRoom = set(reference, {
       ...user,
     });

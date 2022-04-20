@@ -2,9 +2,9 @@ import Head from "next/head";
 import { authContext } from "../context/authcontext";
 import { useRouter } from "next/router";
 import { useEffect, useContext } from "react";
+
 import _ from "lodash";
 import Logout from "../components/logout";
-import Link from "next/link";
 
 const Home = () => {
   const { user } = useContext(authContext);
@@ -13,6 +13,7 @@ const Home = () => {
     // if (_.isEmpty(user)) {
     //   router.push("/auth/signin");
     // }
+    // join a room
   }, []);
   const linkLikebuttonStyle = {
     padding: "10px",
@@ -35,25 +36,35 @@ const Home = () => {
           <div className="games">
             <div>
               <h2>Flipper</h2>
-              <Link
+              <button
                 style={linkLikebuttonStyle}
-                href={"/game/batuground?game=flipper"}
+                onClick={() => {
+                  router.push("/game/batuground?game=flipper");
+                }}
               >
                 Play flipper
-              </Link>
+              </button>
             </div>
             <div>
               <h2>Spellbatu</h2>
-              <Link
+              <button
                 style={linkLikebuttonStyle}
-                href="/game/batuground?game=spellbatu"
+                onClick={() => {
+                  router.push("/game/batuground?game=spellbatu");
+                }}
               >
                 Play Spellbatu
-              </Link>
+              </button>
             </div>
             <div>
               <h2>Builder</h2>
-              <Link href={"/game/batuground?game=builder"}>Play Builder</Link>
+              <button
+                onClick={() => {
+                  router.push("/game/batuground?game=spellbatu");
+                }}
+              >
+                Play Builder
+              </button>
             </div>
           </div>
         </main>
