@@ -1,19 +1,27 @@
 import { auth } from "../config/firebase.config";
 import { signOut } from "firebase/auth";
 import { useRouter, withRouter } from "next/router";
+import { useAuth } from "../context/authcontext";
 
 const Logout = () => {
+  const { logout } = useAuth();
+  console.log(logout);
   const router = useRouter();
-  const logout = async () => {
+
+  const logUserOut = async () => {
     try {
-      const signout = await signOut(auth);
+      await logout();
       router.push("/auth/signin");
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log("Something went wrong");
+      console.log(err);
     }
   };
   return (
-    <button style={{ padding: "10px", borderRadius: "10px" }} onClick={logout}>
+    <button
+      style={{ padding: "10px", borderRadius: "10px" }}
+      onClick={logUserOut}
+    >
       logout
     </button>
   );
