@@ -7,6 +7,7 @@ const Dashboard = () => {
   return (
     <ProtectedRoute>
       <div className="dashboard">
+        <h1>Hello, {user.displayName}</h1>
         <h1>User dashboard</h1>
         <Logout />
       </div>
