@@ -13,9 +13,7 @@ const Signup = () => {
     try {
       await createAccount(username, email);
       router.push("/dashboard");
-    } catch (error) {
-      console.log(error.code);
-    }
+    } catch (error) {}
   };
   return (
     <div className="sign-up">

@@ -5,7 +5,6 @@ import { useAuth } from "../context/authcontext";
 
 const Logout = () => {
   const { logout } = useAuth();
-  console.log(logout);
   const router = useRouter();
 
   const logUserOut = async () => {
