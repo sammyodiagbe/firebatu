@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <ProtectedRoute>
       <div className="dashboard">
-        <h1>Hello, {user ? user.displayName : "player"}</h1>
+        <h1>Hello, {user.displayName}</h1>
         <h1>User dashboard</h1>
         <div>
           <h1>Choose a batu ground</h1>
