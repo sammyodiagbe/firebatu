@@ -1,0 +1,11 @@
+div.container {
+
+}
+div.activeUsers {
+
+}
+
+main.main {
+    display: flex;
+    padding: 1rem;
+}

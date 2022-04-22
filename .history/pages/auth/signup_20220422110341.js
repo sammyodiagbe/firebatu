@@ -49,7 +49,7 @@ const Signup = () => {
           onChange={({ target: { value } }) => setPassword(value)}
         />
         <br />
-        <h3>Choose your avatar.</h3>
+        <h3>Choose gender</h3>
         <label htmlFor="image-1">
           <Image src="/p1.svg" alt="female avatar" width={80} height={80} />
           <input type="radio" name="image-1" id="image-1" />

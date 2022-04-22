@@ -17,16 +17,13 @@ const BatuGround = () => {
 
   return (
     <GameWrapper>
-      <div className="container">
-        <main className={batugroundStyle.main}>
-          <div className={batugroundStyle.activeUsers}>
-            <h3>Active users</h3>
-          </div>
-          <aside className={batugroundStyle.gameboard}>
-            <Flipper />
-          </aside>
-        </main>
+      <div className="container"></div>
+      <div className={batugroundStyle.activeUsers}>
+        <h3>Active users</h3>
       </div>
+      <main className={batugroundStyle.gameboard}>
+        <Flipper />
+      </main>
     </GameWrapper>
   );
 };

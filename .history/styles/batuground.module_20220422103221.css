@@ -1,0 +1,21 @@
+div.container {
+
+}
+div.activeUsers {
+    grid-area: 'active_users';
+    background: lightgrey;
+    
+}
+
+aside.gameboard {
+    grid-area: 'board';
+    background: blue;
+   
+}
+
+main.main {
+    display: grid;
+    padding: 1.5rem;
+    grid-template-areas: 
+    'active_users active_users board board board';
+}

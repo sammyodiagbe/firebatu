@@ -23,9 +23,9 @@ a {
   outline: none;
 }
 
-input[type=text],input[type=email],input[type=password] {
+input {
   padding: 1rem;
-  padding-left: .4rem;
+  padding-left: .5rem;
 }
 
 input:focus {
