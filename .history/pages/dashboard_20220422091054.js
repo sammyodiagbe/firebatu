@@ -8,6 +8,7 @@ import { useRoomContext } from "../context/roomContext";
 
 const Dashboard = () => {
   const { user } = useAuth();
+  const { joinRoom } = useRoomContext();
 
   useEffect(() => {}, []);
   return (

@@ -8,19 +8,16 @@ export const useRoomContext = () => useContext(roomContext);
 
 const RoomContextProvider = ({ children }) => {
   const { user } = useAuth();
-  const joinRoom = async (roomname) => {
+  const joinRoom = (roomname) => {
     // this function is for joining room
-    try {
-      await set(ref(database, `${roomname}/` + user.uid), {
-        displayName: user.displayName,
-      });
-      console.log("succesfully joined room");
-    } catch (err) {
-      console.log(err);
-    }
+    set(ref(database, `${roomname}/` + user.uid), {
+      displayName: user.displayName,
+    });
   };
   return (
-    <roomContext.Provider value={{ joinRoom }}>{children}</roomContext.Provider>
+    <roomContext.Provider value={{ joinRoom }}>
+      {user ? children : null}
+    </roomContext.Provider>
   );
 };
 

@@ -13,7 +13,7 @@ const Signup = () => {
   const handleAccountCreation = async (event) => {
     event.preventDefault();
     try {
-      const { user } = await createAccount(email, password, username);
+      const user = await createAccount(email, password, username);
       console.log(user);
       await updateProfile(user, {
         displayName: username,

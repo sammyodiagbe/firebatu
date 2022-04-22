@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../../context/authcontext";
 import { useRouter } from "next/router";
-import { updateProfile } from "firebase/auth";
+import { updateCurrentUser } from "firebase/auth";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -13,8 +13,7 @@ const Signup = () => {
   const handleAccountCreation = async (event) => {
     event.preventDefault();
     try {
-      const { user } = await createAccount(email, password, username);
-      console.log(user);
+      const user = await createAccount(email, password, username);
       await updateProfile(user, {
         displayName: username,
       });

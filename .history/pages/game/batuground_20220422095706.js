@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { useEffect, useContext } from "react";
 import Flipper from "../../components/batugrounds/flipper";
 import GameWrapper from "../../components/batugrounds/gameWrapper";
-import Logout from "../../components/logout";
 import { useRoomContext } from "../../context/roomContext";
 
 const BatuGround = () => {
@@ -17,7 +16,6 @@ const BatuGround = () => {
   return (
     <GameWrapper>
       <h1>Batuground {room}</h1>
-      <Logout />
       <main>
         <Flipper />
       </main>
