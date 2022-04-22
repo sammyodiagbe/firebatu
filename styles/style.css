@@ -1,0 +1,75 @@
+nav.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav.nav div a {
+  padding: 0 0.5rem;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+main.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5rem 8rem;
+  color: #555;
+}
+
+main.main div.sign-up {
+  padding: 1rem;
+}
+
+main.main div.sign-up h1.title {
+  color: #6a5bcd;
+  margin-bottom: 1rem;
+}
+
+main.main div.sign-up input[type=text], main.main div.sign-up input[type=email], main.main div.sign-up input[type=password] {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 1.2rem .7rem;
+  font-size: 1rem;
+  background: #eee;
+}
+
+main.main div.sign-up button {
+  padding: 1rem;
+  width: 100%;
+  background: #6a5bcd;
+  color: #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-weight: bold;
+}
+
+main.main div.sign-up button:hover {
+  background: #5b46e2;
+}
+
+main.main div.sign-up div.avatar-container {
+  padding: 1rem .6rem;
+}
+
+main.main aside.aside-right {
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */

@@ -39,7 +39,7 @@ const AuthContextProvider = ({ children }) => {
   }, []);
   return (
     <authContext.Provider value={{ user, createAccount, login, logout }}>
-      <>{loading ? null : children}</>
+      {loading ? null : children}
     </authContext.Provider>
   );
 };

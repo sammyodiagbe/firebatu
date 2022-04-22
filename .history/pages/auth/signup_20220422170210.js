@@ -77,7 +77,7 @@ const Signup = () => {
           />
           <br />
           <h3>Choose your avatar.</h3>
-          <div className="avatar-container">{renderAvatarChoice}</div>
+          <div>{renderAvatarChoice}</div>
 
           <button>Sign me up</button>
         </form>

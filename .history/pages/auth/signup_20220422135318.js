@@ -51,44 +51,36 @@ const Signup = () => {
     }
   };
   return (
-    <main className="main">
-      <div className="sign-up">
-        <h1 className="title">Create your account.</h1>
-        <form onSubmit={handleAccountCreation}>
-          <input
-            type="email"
-            placeholder="email"
-            value={email}
-            onChange={({ target: { value } }) => setEmail(value)}
-          />
-          <br />
-          <input
-            type="text"
-            placeholder="username"
-            value={username}
-            onChange={({ target: { value } }) => setUsername(value)}
-          />
-          <br />
-          <input
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={({ target: { value } }) => setPassword(value)}
-          />
-          <br />
-          <h3>Choose your avatar.</h3>
-          <div className="avatar-container">{renderAvatarChoice}</div>
+    <div className="sign-up">
+      <h1>Create your account.</h1>
+      <form onSubmit={handleAccountCreation}>
+        <input
+          type="email"
+          placeholder="email"
+          value={email}
+          onChange={({ target: { value } }) => setEmail(value)}
+        />
+        <br />
+        <input
+          type="text"
+          placeholder="username"
+          value={username}
+          onChange={({ target: { value } }) => setUsername(value)}
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="password"
+          value={password}
+          onChange={({ target: { value } }) => setPassword(value)}
+        />
+        <br />
+        <h3>Choose your avatar.</h3>
+        <div>{renderAvatarChoice}</div>
 
-          <button>Sign me up</button>
-        </form>
-      </div>
-      <aside className="aside-right">
-        <h2>
-          Smart or Fast enough to be on top, create a batu account then get
-          batuling
-        </h2>
-      </aside>
-    </main>
+        <button>Sign me up</button>
+      </form>
+    </div>
   );
 };
 

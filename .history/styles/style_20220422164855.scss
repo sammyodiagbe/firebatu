@@ -1,0 +1,13 @@
+nav.nav {
+    background: orange;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;   
+
+    div {
+        a {
+            padding: 0 0.5rem;
+        }
+    }
+}

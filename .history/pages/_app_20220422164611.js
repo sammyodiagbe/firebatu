@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AuthContextProvider>
-      <Nav />
+      {/* <Nav /> */}
       <RoomContextProvider>
         <Component {...pageProps} />
       </RoomContextProvider>

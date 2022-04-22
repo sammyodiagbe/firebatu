@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import "../styles/style.css";
 import AuthContextProvider, { useAuth } from "../context/authcontext";
 import _ from "lodash";
 import RoomContextProvider from "../context/roomContext";

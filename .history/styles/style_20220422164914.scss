@@ -1,0 +1,14 @@
+nav.nav {
+    
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;   
+
+    div {
+        a {
+            padding: 0 0.5rem;
+            font-size: 14px;
+        }
+    }
+}

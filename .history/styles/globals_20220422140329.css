@@ -33,3 +33,7 @@ input:focus {
 }
 
 
+nav.nav {
+  height: 80px;
+  padding: 1rem;
+}

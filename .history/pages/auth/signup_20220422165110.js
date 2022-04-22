@@ -53,7 +53,7 @@ const Signup = () => {
   return (
     <main className="main">
       <div className="sign-up">
-        <h1 className="title">Create your account.</h1>
+        <h1>Create your account.</h1>
         <form onSubmit={handleAccountCreation}>
           <input
             type="email"
@@ -77,17 +77,11 @@ const Signup = () => {
           />
           <br />
           <h3>Choose your avatar.</h3>
-          <div className="avatar-container">{renderAvatarChoice}</div>
+          <div>{renderAvatarChoice}</div>
 
           <button>Sign me up</button>
         </form>
       </div>
-      <aside className="aside-right">
-        <h2>
-          Smart or Fast enough to be on top, create a batu account then get
-          batuling
-        </h2>
-      </aside>
     </main>
   );
 };
