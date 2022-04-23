@@ -16,7 +16,7 @@ const Dashboard = () => {
       <main className="dashboard">
         <div>
           <h1 className="title">Choose a batu ground</h1>
-          <div className="games">
+          <div>
             <Game
               gameName={"flipper"}
               description="some sort of description goes in here"

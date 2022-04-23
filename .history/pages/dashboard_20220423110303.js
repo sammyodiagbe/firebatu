@@ -15,8 +15,8 @@ const Dashboard = () => {
     <ProtectedRoute>
       <main className="dashboard">
         <div>
-          <h1 className="title">Choose a batu ground</h1>
-          <div className="games">
+          <h1>Choose a batu ground</h1>
+          <div>
             <Game
               gameName={"flipper"}
               description="some sort of description goes in here"

@@ -99,35 +99,4 @@ div.sign-in {
 
 main.dashboard {
     padding: 2rem;
-    color: #555;
-    h1.title {
-        margin-bottom: 3rem;
-        text-align: center;
-    }
-
-    div.games {
-        padding: 0 3rem;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        div.game {
-            padding: 1rem;
-            text-align: center;
-            h2 {
-                margin-bottom: 1.5rem;
-            }
-            p {
-                margin-bottom: 3rem;
-            }
-            a {
-                padding: .9rem;
-                font-size: .9rem;
-                background: #eeeeee;
-                border-radius: 5px;
-                &:hover {
-                    background:#f24872;
-                    color: #fff;
-                }
-            }
-        }
-    }
 }

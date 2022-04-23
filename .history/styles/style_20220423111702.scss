@@ -102,7 +102,6 @@ main.dashboard {
     color: #555;
     h1.title {
         margin-bottom: 3rem;
-        text-align: center;
     }
 
     div.games {
@@ -111,7 +110,6 @@ main.dashboard {
         grid-template-columns: repeat(3,1fr);
         div.game {
             padding: 1rem;
-            text-align: center;
             h2 {
                 margin-bottom: 1.5rem;
             }

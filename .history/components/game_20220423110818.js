@@ -6,7 +6,7 @@ const Game = ({ gameName, description }) => {
       <h2>{gameName}</h2>
       <p>{description}</p>
       <Link href={`/game/batuground?room=${gameName}`} passHref>
-        {`play ${gameName}`}
+        <>Play {gameName}</>
       </Link>
     </div>
   );

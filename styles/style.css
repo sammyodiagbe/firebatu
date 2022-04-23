@@ -108,4 +108,47 @@ div.sign-in div.container form button {
   width: 100%;
   font-weight: bolder;
 }
+
+main.dashboard {
+  padding: 2rem;
+  color: #555;
+}
+
+main.dashboard h1.title {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+main.dashboard div.games {
+  padding: 0 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+main.dashboard div.games div.game {
+  padding: 1rem;
+  text-align: center;
+}
+
+main.dashboard div.games div.game h2 {
+  margin-bottom: 1.5rem;
+}
+
+main.dashboard div.games div.game p {
+  margin-bottom: 3rem;
+}
+
+main.dashboard div.games div.game a {
+  padding: .9rem;
+  font-size: .9rem;
+  background: #eeeeee;
+  border-radius: 5px;
+}
+
+main.dashboard div.games div.game a:hover {
+  background: #f24872;
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */

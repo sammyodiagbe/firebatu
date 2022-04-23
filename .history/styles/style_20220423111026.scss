@@ -102,7 +102,6 @@ main.dashboard {
     color: #555;
     h1.title {
         margin-bottom: 3rem;
-        text-align: center;
     }
 
     div.games {
@@ -111,22 +110,15 @@ main.dashboard {
         grid-template-columns: repeat(3,1fr);
         div.game {
             padding: 1rem;
-            text-align: center;
             h2 {
                 margin-bottom: 1.5rem;
             }
             p {
-                margin-bottom: 3rem;
+                margin-bottom: .9rem;
             }
             a {
-                padding: .9rem;
+                padding: 1rem;
                 font-size: .9rem;
-                background: #eeeeee;
-                border-radius: 5px;
-                &:hover {
-                    background:#f24872;
-                    color: #fff;
-                }
             }
         }
     }
