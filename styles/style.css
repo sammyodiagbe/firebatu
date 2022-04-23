@@ -21,8 +21,9 @@ main.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5rem 8rem;
+  padding: 2rem 8rem;
   color: #555;
+  background-color: linear-gradient();
 }
 
 main.main div.sign-up {
@@ -71,5 +72,40 @@ main.main aside.aside-right {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+div.sign-in {
+  padding: 5rem 0;
+}
+
+div.sign-in div.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+div.sign-in div.container h1 {
+  margin-bottom: 2rem;
+  color: #555;
+  text-align: center;
+}
+
+div.sign-in div.container form input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .9rem;
+}
+
+div.sign-in div.container form input, div.sign-in div.container form button {
+  border-radius: 5px;
+}
+
+div.sign-in div.container form button {
+  padding: 1rem;
+  background: #f24872;
+  color: #ffffff;
+  font-weight: bold;
+  width: 100%;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=style.css.map */

@@ -15,5 +15,7 @@ nav.nav {
   width: 100vw;
 }
 
-
+nav.nav div.side-navigation a {
+  padding: 0 10px;
+}
 /*# sourceMappingURL=Home.module.css.map */

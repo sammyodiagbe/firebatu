@@ -64,34 +64,9 @@ main.main {
 // sign in
 
 div.sign-in {
-    padding: 5rem 0;
+    background: orange;
     div.container {
         width: 400px;
         margin: 0 auto;
-        h1 {
-            margin-bottom: 2rem;
-            color: #555;
-            text-align: center;
-        }
-        form {
-            input {
-                width: 100%;
-                margin-bottom: 1rem;
-                padding: 1rem;
-                font-size: .9rem;
-            }
-            input,button {
-                border-radius: 5px;
-            }
-
-            button {
-                padding: 1rem;
-                background: #f24872;
-                color: #ffffff;
-                font-weight: bold;
-                width: 100%;
-                font-weight: bolder;
-            }
-        }
     }
 }

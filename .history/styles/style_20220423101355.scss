@@ -69,9 +69,7 @@ div.sign-in {
         width: 400px;
         margin: 0 auto;
         h1 {
-            margin-bottom: 2rem;
-            color: #555;
-            text-align: center;
+            margin-bottom: 1rem;
         }
         form {
             input {
@@ -79,18 +77,6 @@ div.sign-in {
                 margin-bottom: 1rem;
                 padding: 1rem;
                 font-size: .9rem;
-            }
-            input,button {
-                border-radius: 5px;
-            }
-
-            button {
-                padding: 1rem;
-                background: #f24872;
-                color: #ffffff;
-                font-weight: bold;
-                width: 100%;
-                font-weight: bolder;
             }
         }
     }
