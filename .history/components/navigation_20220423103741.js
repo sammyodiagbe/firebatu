@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useAuth } from "../context/authcontext";
 const Nav = () => {
-  const { user } = useAuth();
+  const { user } = useAuth;
   return (
     <nav className={"nav"}>
       <Link href="/" passHref>
