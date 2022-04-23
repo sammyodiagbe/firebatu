@@ -5,7 +5,6 @@ import { useAuth } from "../context/authcontext";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRoomContext } from "../context/roomContext";
-import Game from "../components/game";
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -17,18 +16,9 @@ const Dashboard = () => {
         <div>
           <h1>Choose a batu ground</h1>
           <div>
-            <Game
-              gameName={"flipper"}
-              description="some sort of description goes in here"
-            />
-            <Game
-              gameName={"Tictactoe"}
-              description="Some sort of description also goes in here"
-            />
-            <Game
-              gameName={"Castle"}
-              description="This is sort of like the description of each game"
-            />
+            <Link href="/game/batuground?room=flipper" passHref>
+              Flipper
+            </Link>
           </div>
         </div>
         <Logout />

@@ -17,18 +17,9 @@ const Dashboard = () => {
         <div>
           <h1>Choose a batu ground</h1>
           <div>
-            <Game
-              gameName={"flipper"}
-              description="some sort of description goes in here"
-            />
-            <Game
-              gameName={"Tictactoe"}
-              description="Some sort of description also goes in here"
-            />
-            <Game
-              gameName={"Castle"}
-              description="This is sort of like the description of each game"
-            />
+            <Game gameName={"flipper"} />
+            <Game gameName={"Tictactoe"} />
+            <Game gameName={"Castle"} />
           </div>
         </div>
         <Logout />
