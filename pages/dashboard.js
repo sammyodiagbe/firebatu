@@ -31,7 +31,6 @@ const Dashboard = () => {
             />
           </div>
         </div>
-        <Logout />
       </main>
     </ProtectedRoute>
   );

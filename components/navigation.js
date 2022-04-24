@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useAuth } from "../context/authcontext";
+import Logout from "./logout";
 const Nav = () => {
   const { user } = useAuth();
   return (
@@ -10,7 +11,10 @@ const Nav = () => {
 
       <div>
         {user ? (
-          <h4>hi, {user.displayName}</h4>
+          <>
+            <h4>hi, {user.displayName}</h4>
+            <Logout />
+          </>
         ) : (
           <>
             <Link href="/auth/signin" passHref>
